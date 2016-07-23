@@ -52,4 +52,4 @@ fi
 echo "Enter a commit message:"
 read commitmessage
 git commit -m "$TYPE: $commitmessage"
-git push -u origin master
+git push origin master
