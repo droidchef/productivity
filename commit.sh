@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 TYPE=$1
 if [ "$TYPE" == "feat" ]; then
 	MESSAGE="a new feature"
@@ -34,7 +34,7 @@ if [ "$MESSAGE" == "nothing" ]; then
 else 
 
 	ARE_THERE_UNSTAGED_FILES=$(git status | grep "Changes not staged for commit" | wc -l)
-	if [ "$ARE_THERE_UNSTAGED_FILES" == "       1" ]; then
+	if [ "$ARE_THERE_UNSTAGED_FILES" == "       1" -o "$ARE_THERE_UNSTAGED_FILES" == "1" ]; then
 		echo "There are unstaged files in the current branch, do you want to add all and proceed ? [y/n]"
 		read choice
 		if [ "$choice" == "y" -o "$choice" == "Y" ]; then
