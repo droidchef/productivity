@@ -44,7 +44,8 @@ else
 		fi
 
 	else 
-		echo "We are Good"
+		echo "Nothing to commit. Exiting.."
+		exit
 	fi
 	echo "Committing $MESSAGE"
 fi
