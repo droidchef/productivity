@@ -35,9 +35,9 @@ else
 
 	ARE_THERE_UNSTAGED_FILES=$(git status | grep "Changes not staged for commit" | wc -l)
 	if [ "$ARE_THERE_UNSTAGED_FILES" == "       1" -o "$ARE_THERE_UNSTAGED_FILES" == "1" ]; then
-		echo "There are unstaged files in the current branch, do you want to add all and proceed ? [y/n]"
+		echo "There are unstaged files in the current branch, do you want to add all and proceed ? [Y/n]"
 		read choice
-		if [ "$choice" == "y" -o "$choice" == "Y" ]; then
+		if [ "$choice" == "y" -o "$choice" == "Y" -o "$choice" == "" ]; then
 			$( git add --all )
 		else 
 			exit
