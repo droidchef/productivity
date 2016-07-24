@@ -53,4 +53,11 @@ fi
 echo "Enter a commit message:"
 read commitmessage
 git commit -m "$TYPE: $commitmessage"
-git push origin master
+
+echo "Do you want to push the changes to remote branch ? [Y/n]"
+read choice
+if [ "$choice" == "y" -o "$choice" == "Y" -o "$choice" == "" ]; then
+	$( git push )
+else
+	exit
+fi
