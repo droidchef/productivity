@@ -42,10 +42,6 @@ else
 		else 
 			exit
 		fi
-
-	else 
-		echo "Nothing to commit. Exiting.."
-		exit
 	fi
 	echo "Committing $MESSAGE"
 fi
